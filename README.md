@@ -96,12 +96,18 @@ modified_data1.csv: Further cleaned data with degree information.
 
 # Dependencies
 Selenium
+
 Pandas
+
 Numpy
+
 Scikit-learn
+
 NLTK
+
 Matplotlib
-Seaborn
+
+sklearn
 
 # Conclusion
 This project comprehensively analyzes the Data Analyst job market in India, helping job seekers understand market trends, required skills, and educational qualifications. The insights gained from this analysis can significantly simplify the job search process and guide job seekers in aligning their skills with market demands.
