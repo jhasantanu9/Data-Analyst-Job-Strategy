@@ -91,7 +91,9 @@ Company and Industry Insights: Identified top companies, industries, and skills 
 
 # CSV files
 AnalystJobs.csv: Raw scraped data from LinkedIn.
+
 modified_data.csv: Preprocessed and cleaned data.
+
 modified_data1.csv: Further cleaned data with degree information.
 
 # Dependencies
