@@ -4,7 +4,7 @@
 This project aims to simplify the job hunt for Data Analyst roles in India by scraping job listings from LinkedIn, preprocessing and cleaning the data, and performing detailed analysis. The project includes skills analysis, educational requirements, work mode preferences, job location distribution, and company and industry insights.
 
 ## Goals
-Simplify Job Search: Streamline the job search process for Data Analyst positions in India.
+Simplify Job Search: Streamline the search process for Data Analyst positions in India.
 Comprehensive Analysis: Provide insights into the skills, experience, and educational requirements for Data Analyst roles.
 Data-Driven Insights: Offer data-driven insights to help job seekers understand market trends and requirements.
 
