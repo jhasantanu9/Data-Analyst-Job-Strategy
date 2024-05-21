@@ -36,6 +36,7 @@ Data-Driven Insights: Offer data-driven insights to help job seekers understand 
 Data Collection
 Web Scraping: Utilized Selenium to scrape job listings for Data Analyst roles from LinkedIn.
 Saved Data: The scraped data was saved into a CSV file named AnalystJobs.csv.
+
 Data Preprocessing and Cleaning
 Initial Cleaning: Performed initial cleaning and saved the processed data to modified_data.csv.
 Advanced Cleaning: Further processed the data to extract degrees from job descriptions and saved it to modified_data1.csv.
