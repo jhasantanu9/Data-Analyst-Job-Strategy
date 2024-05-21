@@ -80,6 +80,7 @@ Industry-Specific Skills: Identified top skills required for each industry.
 # Hypothesis Testing
 Recruitment Status:
 Tested if recruitment status depends on Industry and Location.
+
 Required Experience/Degree among Industries:
 Tested if required experience or degree for jobs differs between industries.
 
