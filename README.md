@@ -82,7 +82,8 @@ Recruitment Status:
 Tested if recruitment status depends on Industry and Location.
 Required Experience/Degree among Industries:
 Tested if required experience or degree for jobs differs between industries.
-Key Findings
+
+# Key Findings
 Skills Analysis: Identified top skills and skill clusters for Data Analyst roles.
 Educational Requirements: Analyzed degree distribution and top skills by degree.
 Work Mode Preferences: Analyzed work mode distribution and top skills by work mode.
