@@ -4,115 +4,101 @@
 This project aims to simplify the job hunt for Data Analyst roles in India by scraping job listings from LinkedIn, preprocessing and cleaning the data, and performing detailed analysis. The project includes skills analysis, educational requirements, work mode preferences, job location distribution, and company and industry insights.
 
 ## Goals
-Simplify Job Search: Streamline the search process for Data Analyst positions in India.
-Comprehensive Analysis: Provide insights into the skills, experience, and educational requirements for Data Analyst roles.
-Data-Driven Insights: Offer data-driven insights to help job seekers understand market trends and requirements.
+- **Simplify Job Search:** Streamline the search process for Data Analyst positions in India.
+- **Comprehensive Analysis:** Provide insights into the skills, experience, and educational requirements for Data Analyst roles.
+- **Data-Driven Insights:** Offer data-driven insights to help job seekers understand market trends and requirements.
 
 ## Data Dictionary
 
-| Column Name              | Description                                                                                     |
-|--------------------------|-------------------------------------------------------------------------------------------------|
-| `Link`                   | URL to the job listing.                                                                         |
-| `Job Title`              | Title of the job position.                                                                      |
-| `Required Skills`        | List of skills required for the job, extracted from the job description.                        |
-| `Job Description`        | Full text of the job description.                                                               |
-| `Required Experience`    | Level of experience required for the job (e.g., Entry, Mid, Senior).                            |
-| `Company Name`           | Name of the company offering the job.                                                           |
-| `Location`               | Location of the job, typically formatted as "City, State".                                      |
-| `Employee Size`          | Size of the company in terms of number of employees.                                            |
-| `Industry`               | Industry in which the company operates.                                                         |
-| `Work Mode`              | Mode of work (e.g., On-site, Remote, Hybrid).                                                   |
-| `Actively recruiting`    | Indicator of whether the company is actively recruiting (Yes/No).                               |
-| `City`                   | City where the job is located, extracted from Location.                                         |
-| `State`                  | State where the job is located, extracted from Location.                                        |
-| `Cleaned_Job_Description`| Preprocessed job description used for text analysis (lowercased, tokenized, stopwords removed). |
-| `bachelor`               | Binary indicator (0/1) of whether a Bachelor's degree is mentioned as a requirement.            |
-| `master`                 | Binary indicator (0/1) of whether a Master's degree is mentioned as a requirement.              |
-| `phd`                    | Binary indicator (0/1) of whether a PhD degree is mentioned as a requirement.                   |
-
+| Column Name               | Description                                                                                     |
+|---------------------------|-------------------------------------------------------------------------------------------------|
+| `Link`                    | URL to the job listing.                                                                         |
+| `Job Title`               | Title of the job position.                                                                      |
+| `Required Skills`         | List of skills required for the job, extracted from the job description.                        |
+| `Job Description`         | Full text of the job description.                                                               |
+| `Required Experience`     | Level of experience required for the job (e.g., Entry, Mid, Senior).                            |
+| `Company Name`            | Name of the company offering the job.                                                           |
+| `Location`                | Location of the job, typically formatted as "City, State".                                      |
+| `Employee Size`           | Size of the company in terms of number of employees.                                            |
+| `Industry`                | Industry in which the company operates.                                                         |
+| `Work Mode`               | Mode of work (e.g., On-site, Remote, Hybrid).                                                   |
+| `Actively Recruiting`     | Indicator of whether the company is actively recruiting (Yes/No).                               |
+| `City`                    | City where the job is located, extracted from Location.                                         |
+| `State`                   | State where the job is located, extracted from Location.                                        |
+| `Cleaned_Job_Description` | Preprocessed job description used for text analysis (lowercased, tokenized, stopwords removed). |
+| `bachelor`                | Binary indicator (0/1) of whether a Bachelor's degree is mentioned as a requirement.            |
+| `master`                  | Binary indicator (0/1) of whether a Master's degree is mentioned as a requirement.              |
+| `phd`                     | Binary indicator (0/1) of whether a PhD degree is mentioned as a requirement.                   |
 
 ## Project Workflow
 
-Data Collection
-Web Scraping: Utilized Selenium to scrape job listings for Data Analyst roles from LinkedIn.
-Saved Data: The scraped data was saved into a CSV file named AnalystJobs.csv.
+### Data Collection
+1. **Web Scraping:** Utilized Selenium to scrape job listings for Data Analyst roles from LinkedIn.
+2. **Saved Data:** The scraped data was saved into a CSV file named `AnalystJobs.csv`.
 
-Data Preprocessing and Cleaning
-Initial Cleaning: Performed initial cleaning and saved the processed data to modified_data.csv.
-Advanced Cleaning: Further processed the data to extract degrees from job descriptions and saved it to modified_data1.csv.
+### Data Preprocessing and Cleaning
+1. **Initial Cleaning:** Performed initial cleaning and saved the processed data to `modified_data.csv`.
+2. **Advanced Cleaning:** Further processed the data to extract degrees from job descriptions and saved it to `modified_data1.csv`.
 
 ## Analysis
 
-###Skills Analysis:
+### Skills Analysis
+- **Token Frequency:** Identified and visualized the most frequently mentioned skills in job listings.
+- **Skill Clustering:** Used TF-IDF vectorization and K-means clustering to identify groups of related skills.
+- **Skills by Experience Level:** Visualized top skills required for different experience levels.
 
-Token Frequency: Identified and visualized the most frequently mentioned skills in job listings.
-Skill Clustering: Used TF-IDF vectorization and K-means clustering to identify groups of related skills.
-Skills by Experience Level: Visualized top skills required for different experience levels.
+### Educational Requirements
+- **Degree Distribution:** Analyzed and visualized the distribution of job openings based on required educational qualifications.
+- **Top Skills by Degree:** Identified top skills required for jobs requiring different educational qualifications.
 
-###Educational Requirements:
+### Work Mode Analysis
+- **Work Mode Distribution:** Analyzed and visualized the distribution of jobs by work mode.
+- **Top Skills by Work Mode:** Identified top skills required for different work modes.
 
-Degree Distribution: Analyzed and visualized the distribution of job openings based on required educational qualifications.
-Top Skills by Degree: Identified top skills required for jobs requiring different educational qualifications.
+### Job Location Analysis
+- **Job Locations:** Analyzed the geographic distribution of job openings using city coordinates.
+- **Top Cities:** Identified and visualized the top cities with the most job openings.
+- **Actively Recruiting Locations:** Identified and visualized locations with the most actively recruiting companies.
 
-###Work Mode Analysis:
+### Company Analysis
+- **Companies with Most Job Openings:** Identified top companies with the most job openings.
+- **Actively Recruiting Companies:** Visualized companies actively recruiting based on job openings.
 
-Work Mode Distribution: Analyzed and visualized the distribution of jobs by work mode.
-Top Skills by Work Mode: Identified top skills required for different work modes.
+### Industry Analysis
+- **Industry Distribution:** Analyzed and visualized the distribution of job openings across different industries.
+- **Actively Recruiting Industries:** Identified top industries actively recruiting for Data Analyst positions.
+- **Employee Size Distribution:** Analyzed the distribution of job openings based on the employee size of companies.
+- **Work Mode by Employee Size:** Visualized the distribution of work modes across different employee sizes.
+- **Industry-Specific Skills:** Identified top skills required for each industry.
 
-###Job Location Analysis:
+## Hypothesis Testing
+1. **Recruitment Status:** Tested if recruitment status depends on Industry and Location.
+2. **Required Experience/Degree among Industries:** Tested if required experience or degree for jobs differs between industries.
 
-Job Locations: Analyzed the geographic distribution of job openings using city coordinates.
-Top Cities: Identified and visualized the top cities with the most job openings.
-Actively Recruiting Locations: Identified and visualized locations with the most actively recruiting companies.
+## Key Findings
+- **Skills Analysis:** Identified top skills and skill clusters for Data Analyst roles.
+- **Educational Requirements:** Analyzed degree distribution and top skills by degree.
+- **Work Mode Preferences:** Analyzed work mode distribution and top skills by work mode.
+- **Job Location Insights:** Identified top cities and locations with the most actively recruiting companies.
+- **Company and Industry Insights:** Identified top companies, industries, and skills required in different industries.
 
-###Company Analysis:
+## CSV Files
+- `AnalystJobs.csv`: Raw scraped data from LinkedIn.
+- `modified_data.csv`: Preprocessed and cleaned data.
+- `modified_data1.csv`: Further cleaned data with degree information.
 
-Companies with Most Job Openings: Identified top companies with the most job openings.
-Actively Recruiting Companies: Visualized companies actively recruiting based on job openings.
+## Dependencies
+- Selenium
+- Pandas
+- Numpy
+- Scikit-learn
+- NLTK
+- Matplotlib
+- sklearn
 
-###Industry Analysis:
-
-Industry Distribution: Analyzed and visualized the distribution of job openings across different industries.
-Actively Recruiting Industries: Identified top industries actively recruiting for Data Analyst positions.
-Employee Size Distribution: Analyzed the distribution of job openings based on the employee size of companies.
-Work Mode by Employee Size: Visualized the distribution of work modes across different employee sizes.
-Industry-Specific Skills: Identified top skills required for each industry.
-
-# Hypothesis Testing
-Recruitment Status:
-Tested if recruitment status depends on Industry and Location.
-
-Required Experience/Degree among Industries:
-Tested if required experience or degree for jobs differs between industries.
-
-# Key Findings
-Skills Analysis: Identified top skills and skill clusters for Data Analyst roles.
-Educational Requirements: Analyzed degree distribution and top skills by degree.
-Work Mode Preferences: Analyzed work mode distribution and top skills by work mode.
-Job Location Insights: Identified top cities and locations with the most actively recruiting companies.
-Company and Industry Insights: Identified top companies, industries, and skills required in different industries.
-
-# CSV files
-AnalystJobs.csv: Raw scraped data from LinkedIn.
-
-modified_data.csv: Preprocessed and cleaned data.
-
-modified_data1.csv: Further cleaned data with degree information.
-
-# Dependencies
-Selenium
-
-Pandas
-
-Numpy
-
-Scikit-learn
-
-NLTK
-
-Matplotlib
-
-sklearn
-
-# Conclusion
+## Conclusion
 This project comprehensively analyzes the Data Analyst job market in India, helping job seekers understand market trends, required skills, and educational qualifications. The insights gained from this analysis can significantly simplify the job search process and guide job seekers in aligning their skills with market demands.
+
+---
+
+Thank you for exploring the **Data-Analyst-Job-Market-Analysis** project!
