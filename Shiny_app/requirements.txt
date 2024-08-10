@@ -1,0 +1,9 @@
+matplotlib
+pandas
+wordcloud
+scikit-learn
+scipy
+shiny
+plotly
+shinywidgets
+nltk
